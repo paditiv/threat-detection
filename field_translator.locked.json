@@ -1,0 +1,37 @@
+{
+  "schema_version": "2025-08-18.v1",
+  "zeek_source": "conn.log",
+  "fields": {
+    "proto": "protocol_type",
+    "service": "service",
+    "duration": "duration",
+    "orig_bytes": "src_bytes",
+    "resp_bytes": "dst_bytes",
+    "orig_pkts": "src_pkts",
+    "resp_pkts": "dst_pkts"
+  },
+  "derived": {
+    "byte_ratio": "safe_div(src_bytes, dst_bytes)",
+    "pkt_ratio": "safe_div(src_pkts, dst_pkts)"
+  },
+  "final_feature_order": [
+    "protocol_type",
+    "service",
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "src_pkts",
+    "dst_pkts",
+    "byte_ratio",
+    "pkt_ratio"
+  ],
+  "defaults": {
+    "protocol_type": "unknown",
+    "service": "other",
+    "duration": 0.0,
+    "src_bytes": 0,
+    "dst_bytes": 0,
+    "src_pkts": 0,
+    "dst_pkts": 0
+  }
+}

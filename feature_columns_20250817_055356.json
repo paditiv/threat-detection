@@ -1,0 +1,26 @@
+{
+  "num_cols": [
+    "protocol_type",
+    "service",
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "src_pkts",
+    "dst_pkts",
+    "byte_ratio",
+    "pkt_ratio"
+  ],
+  "cat_cols": [],
+  "all_input_cols": [
+    "protocol_type",
+    "service",
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "src_pkts",
+    "dst_pkts",
+    "byte_ratio",
+    "pkt_ratio"
+  ],
+  "label_col": "label"
+}
